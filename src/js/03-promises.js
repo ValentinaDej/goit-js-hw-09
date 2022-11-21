@@ -1,26 +1,22 @@
-'use strict';
-
 import Notiflix from 'notiflix';
 import 'notiflix/dist/notiflix-3.2.5.min.css';
+
+const refs = {
+  formEl: document.querySelector('.form'),
+  delayEl: document.querySelector('input[name="delay"]'),
+  stepEl: document.querySelector('input[name="step"]'),
+  amountEl: document.querySelecstor('input[name="amount"]'),
+};
 
 Notiflix.Notify.init({
   timeout: 2000,
   clickToClose: true,
 });
 
-const refs = {
-  formEl: document.querySelector('.form'),
-  delayEl: document.querySelector('input[name="delay"]'),
-  stepEl: document.querySelector('input[name="step"]'),
-  // amountEl: document.querySelecstor('input[name="amount"]'),
-};
-
 function onSubmit(evt) {
   evt.preventDefault();
   const options = {
     delayStart: refs.delayEl.value,
-    //amount: refs.amountEl.value,
-    amount: 5,
     step: refs.stepEl.value,
   };
   createPromiseStack(options);

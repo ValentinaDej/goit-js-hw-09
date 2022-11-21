@@ -26,7 +26,7 @@ function onSubmit(evt) {
 
 function createPromiseStack({ delayStart, amount, step }) {
   for (let position = 1; position <= amount; position += 1) {
-    delay = Number(delayStart) + Number(step) * (Number(position) - 1);
+    let delay = Number(delayStart) + Number(step) * (Number(position) - 1);
     createPromise(position, delay)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(

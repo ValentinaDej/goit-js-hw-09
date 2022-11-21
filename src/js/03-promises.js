@@ -10,14 +10,14 @@ const refs = {
   formEl: document.querySelector('.form'),
   delayEl: document.querySelector('input[name="delay"]'),
   stepEl: document.querySelector('input[name="step"]'),
-  amountEl: document.querySelecstor('input[name="amount"]'),
+  //  amountEl: document.querySelecstor('[name="amount"]'),
 };
 
 function onSubmit(evt) {
   evt.preventDefault();
   const options = {
     delayStart: refs.delayEl.value,
-    amount: refs.amountEl.value,
+    //  amount: refs.amountEl.value,
     step: refs.stepEl.value,
   };
   // createPromiseStack(options);

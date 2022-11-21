@@ -10,7 +10,7 @@ const refs = {
   formEl: document.querySelector('.form'),
   delayEl: document.querySelector('input[name="delay"]'),
   stepEl: document.querySelector('input[name="step"]'),
-  //  amountEl: document.querySelecstor('[name="amount"]'),
+  amountEl: document.querySelecstor('input[name="amount"]'),
 };
 
 function onSubmit(evt) {

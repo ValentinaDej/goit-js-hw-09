@@ -17,8 +17,7 @@ function onSubmit(evt) {
   evt.preventDefault();
   const options = {
     delayStart: refs.delayEl.value,
-    //  amount: refs.amountEl.value,
-    amount: 5,
+    amount: refs.amountEl.value,
     step: refs.stepEl.value,
   };
   createPromiseStack(options);
